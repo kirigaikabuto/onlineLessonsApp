@@ -9,3 +9,11 @@ class Course(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class FeedBack(models.Model):
+    name = models.CharField(max_length=255)
+    phone = models.CharField(max_length=255)
+
+    def __str__(self):
+        return self.name

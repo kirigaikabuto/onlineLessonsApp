@@ -2,30 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Contacts</title>
 </head>
 <body>
 <a href="{% url 'index_page_url' %}" >Home</a>
 <a href="{% url 'about_page_url' %}">About</a>
 <a href="{% url 'contact_page_url' %}">Contacts</a>
 
-{{message}}
 
-{%for i in courses%}
+<p>it is contacts page</p>
 
-<p>{{i.name}}</p>
-
-{%endfor%}
-
-{%for i in numbers%}
-   {{i}}<br>
-{%endfor%}
-
-{%if example == 123%}
-  Ok
-{%else%}
-   No
-{%endif%}
+<form method="POST">
+    {%csrf_token%}
+    <p>Name:<input type="text" name="name"></p>
+    <p>Phone:<input type="text" name="phone"></p>
+    <p><input type="submit" value="send"></p>
+</form>
 
 </body>
 </html>

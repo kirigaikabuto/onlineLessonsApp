@@ -2,30 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>About </title>
 </head>
 <body>
 <a href="{% url 'index_page_url' %}" >Home</a>
 <a href="{% url 'about_page_url' %}">About</a>
 <a href="{% url 'contact_page_url' %}">Contacts</a>
 
-{{message}}
 
-{%for i in courses%}
-
-<p>{{i.name}}</p>
-
-{%endfor%}
-
-{%for i in numbers%}
-   {{i}}<br>
-{%endfor%}
-
-{%if example == 123%}
-  Ok
-{%else%}
-   No
-{%endif%}
-
+<h1> it is about page</h1>
 </body>
 </html>
